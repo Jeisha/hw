@@ -1,0 +1,24 @@
+Get ID
+set busy to False
+get name
+get topic or chapter that you like
+session = Queue(maxsize = 10)
+
+while current week is less than end week:
+    if busy == false:
+        if studentQueue is not empty and session is not empty:
+            if student chapter is equal to tutor's favourite chapter:
+                assign the student to this tutor
+                set students in the session status to CONSULTING
+            else: 
+                wait for other tutor to check if they want the student
+                wait for sometime
+                if the student is not taken:
+                    assign the student to this tutor
+                    set students in the session status to CONSULTING
+            
+    else:
+        if all students' status in the session is DONE
+            set session to not full
+            set busy to False
+        

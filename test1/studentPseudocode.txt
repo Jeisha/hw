@@ -1,0 +1,17 @@
+set IN_QUEUE = 0
+set CONSULTING = 1
+set DONE = 2
+
+get name
+get week 
+get consult time
+get queue time
+get consult chapter 
+
+while status != DONE:
+    if status == IN_QUEUE:
+        queue time + 1
+    
+    elif status == CONSULTING:
+        wait until done consultation
+        set status to DONE

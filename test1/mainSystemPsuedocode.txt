@@ -1,0 +1,54 @@
+currWeek = 1
+endWeek = 14
+
+get input number of students
+get input number of class tutors
+
+if number of student is an integer:
+    boolNumOfStudent = True 
+else:
+    end simulation
+
+
+if number of class tutor is an integer:
+    tutors = [blank list]
+    for every tutor:
+        create new tutor class (argument = (id, tutor name))
+        start the thread for the new tutor
+        put it in tutors
+    boolNumOfTutors = True 
+else:
+    end simulation
+
+studentQueue = Queue(maxsize = class tutor * 150)
+students = [blank list]
+boolReset = False
+studentsRejected = 0
+chapters = [blank list]
+
+while current week is less than end week:
+    chapters.append(current week)
+
+    if current week is week 4,8,13:
+        students probability to consult increase
+    else:
+        students probability to consult decrease
+    
+    decide the consultation probability for each student randomly
+
+    for every student:
+        if (the probability value is higher than probability to consult) and studentQueue is not full:
+            create new student class (argument = (students name, chapters to consult))
+            start the thread for the student
+            set student's status to IN_QUEUE
+            put it in studentQueue
+        else:
+            studentsRejected + 1
+    
+    for every student:
+        wait until the student finish consultation
+    
+    currrent week + 1
+
+         
+    
