@@ -6,7 +6,7 @@ session = Queue(maxsize = 10)
 
 while current week is less than end week:
     if busy == false:
-        if studentQueue is not empty and session is not empty:
+        if studentQueue is not empty and session is not full:
             if student chapter is equal to tutor's favourite chapter:
                 assign the student to this tutor
                 set students in the session status to CONSULTING
@@ -16,9 +16,12 @@ while current week is less than end week:
                 if the student is not taken:
                     assign the student to this tutor
                     set students in the session status to CONSULTING
+
+        if (session is not full and studentQueue is empty) or session is full :
+            set busy to True
             
     else:
         if all students' status in the session is DONE
-            set session to not full
+            set session to empty
             set busy to False
         
