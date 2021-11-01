@@ -1,0 +1,8 @@
+link github
+
+Choose either the simABM.py or sim3.py
+
+simABM.py : https://github.com/nordinzakaria/simulation-modeling-sep21/blob/main/simABM.py
+sim3.py : https://github.com/nordinzakaria/simulation-modeling-sep21/blob/main/sim3.py 
+
+- Integrate with OpenGL viz
