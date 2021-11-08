@@ -9,7 +9,7 @@ import numpy as np
 window = Tk()
 agents = []
 simTime = 0
-simEnd = 1000
+simEnd = 250
 cusIndex = 0
 appWidth = 1000
 appHeight = 500
@@ -70,7 +70,7 @@ class Agent(threading.Thread):  # User is a Thread
         return self.move
 
 
-numAgents = 101
+numAgents = 20
 agentDisp = []
 for i in range(numAgents):
     loc = [np.random.rand() * appWidth, np.random.rand() * appHeight]
